@@ -1,0 +1,183 @@
+using System;
+using TechTalk.SpecFlow;
+//using ProgramManagement.AcceptanceTests.Drivers.Home;
+using System.Collections.Generic;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
+using OpenQA.Selenium;
+using OpenQA.Selenium.Chrome;
+using OpenQA.Selenium.Support.UI;
+
+namespace ProgramManagement.AcceptanceTests.StepDefinitions
+{
+    [Binding]
+    public class LapKeHoachGiangDaySteps
+    {
+        public IWebDriver driver;
+        [Given(@"I am in the view LapKeHoachGiangDay")]
+        public void GivenIAmInTheViewLapKeHoachGiangDay()
+        {
+            driver = new ChromeDriver();
+            //Page first load in Homepage
+            //driver.Navigate().GoToUrl("http://localhost:52822");
+            //Go to view LapKeHoachGiangDay
+            driver.Navigate().GoToUrl("http://localhost:52822/KHDaotao/LapKeHoachDaoTao/4");
+        }
+
+        [When(@"I click to combobox Ch?n Khóa h?c")]
+        public void WhenIClickToComboboxCh?nKhoaH?c()
+        {
+            driver.FindElement(By.Id("select2-idKhoaHocCtdtKH-container")).Click();
+            //var selectElement = new SelectElement(option);
+            //selectElement.SelectByIndex(3);      
+        }
+
+        [Then(@"I see the results of options")]
+        public void ThenISeeTheResultsOfOptions(Table table)
+        {
+            ScenarioContext.Current.Pending();
+        }
+
+        [Given(@"I am at the view LapKeHoachGiangDay")]
+        public void GivenIAmAtTheViewLapKeHoachGiangDay()
+        {
+            driver = new ChromeDriver();
+            driver.Navigate().GoToUrl("http://localhost:52822/KHDaotao/LapKeHoachDaoTao/4");
+        }
+
+        [When(@"I click to combobox Ch?n H?c k?")]
+        public void WhenIClickToComboboxCh?nH?cK?()
+        {
+            driver.FindElement(By.Id("select2-idHocKyCtdtKH-container")).Click();
+        }
+
+        [Then(@"I see the list of options")]
+        public void ThenISeeTheListOfOptions(Table table)
+        {
+            ScenarioContext.Current.Pending();
+        }
+
+        [Given(@"Show the view LapKeHoachGiangDay")]
+        public void GivenShowTheViewLapKeHoachGiangDay()
+        {
+            driver = new ChromeDriver();
+            driver.Navigate().GoToUrl("http://localhost:52822/KHDaotao/LapKeHoachDaoTao/4");
+        }
+
+        [When(@"I click to combobox Ch?n Nam h?c")]
+        public void WhenIClickToComboboxCh?nNamH?c()
+        {
+            driver.FindElement(By.Id("idnamhoc")).SendKeys("20172018");
+        }
+
+        [Then(@"I see the list options Nam h?c")]
+        public void ThenISeeTheListOptionsNamH?c(Table table)
+        {
+            ScenarioContext.Current.Pending();
+        }
+
+        [Given(@"I am at view LapKeHoachGiangDay")]
+        public void GivenIAmAtViewLapKeHoachGiangDay()
+        {
+            driver = new ChromeDriver();
+            driver.Navigate().GoToUrl("http://localhost:52822/KHDaotao/LapKeHoachDaoTao/4");
+        }
+
+        [When(@"I click to combobox Ch?n H?c k? gi?ng d?y")]
+        public void WhenIClickToComboboxCh?nH?cK?Gi?ngD?y()
+        {
+            driver.FindElement(By.Id("select2-idkhgdhk-container")).Click();
+        }
+
+        [Then(@"I see the list results of combobox")]
+        public void ThenISeeTheListResultsOfCombobox(Table table)
+        {
+            ScenarioContext.Current.Pending();
+        }
+
+        [Given(@"A web browser is at the view LapKeHoachGiangDay")]
+        public void GivenAWebBrowserIsAtTheViewLapKeHoachGiangDay()
+        {
+            ScenarioContext.Current.Pending();
+        }
+
+        [When(@"I choose an option from combobox Ch?n Khóa h?c")]
+        public void WhenIChooseAnOptionFromComboboxCh?nKhoaH?c()
+        {
+            ScenarioContext.Current.Pending();
+        }
+
+        [When(@"I choose an option from combobox Ch?n H?c k?")]
+        public void WhenIChooseAnOptionFromComboboxCh?nH?cK?()
+        {
+            ScenarioContext.Current.Pending();
+        }
+
+        [Then(@"I see the table DANH SÁCH MÔN H?C show the list of semester courses")]
+        public void ThenISeeTheTableDANHSACHMONH?CShowTheListOfSemesterCourses()
+        {
+            ScenarioContext.Current.Pending();
+        }
+
+        [Given(@"The table DANH SÁCH MÔN H?C already have the list of semester courses")]
+        public void GivenTheTableDANHSACHMONH?CAlreadyHaveTheListOfSemesterCourses()
+        {
+            ScenarioContext.Current.Pending();
+        }
+
+        [When(@"I choose an option from Ch?n Nam h?c combobox")]
+        public void WhenIChooseAnOptionFromCh?nNamH?cCombobox()
+        {
+            ScenarioContext.Current.Pending();
+        }
+
+        [When(@"I choose an option from Ch?n H?c k? gi?ng d?y combobox")]
+        public void WhenIChooseAnOptionFromCh?nH?cK?Gi?ngD?yCombobox()
+        {
+            ScenarioContext.Current.Pending();
+        }
+
+        [When(@"I choose an option from Ch?n Khóa h?c combobox")]
+        public void WhenIChooseAnOptionFromCh?nKhoaH?cCombobox()
+        {
+            ScenarioContext.Current.Pending();
+        }
+
+        [When(@"I choose subject which I want to add to table MÔN H?C ÐU?C CH?N from table DANH SÁCH MÔN H?C")]
+        public void WhenIChooseSubjectWhichIWantToAddToTableMONH?CDU?CCH?NFromTableDANHSACHMONH?C()
+        {
+            ScenarioContext.Current.Pending();
+        }
+
+        [When(@"I click button T?o K? ho?ch gi?ng d?y")]
+        public void WhenIClickButtonT?oK?Ho?chGi?ngD?y()
+        {
+            ScenarioContext.Current.Pending();
+        }
+
+        [Then(@"Then the results are saved to the database K? ho?ch dào t?o")]
+        public void ThenThenTheResultsAreSavedToTheDatabaseK?Ho?chDaoT?o()
+        {
+            ScenarioContext.Current.Pending();
+        }
+
+        [Given(@"A web browser is in the view LapKeHoachGiangDay")]
+        public void GivenAWebBrowserIsInTheViewLapKeHoachGiangDay()
+        {
+            ScenarioContext.Current.Pending();
+        }
+
+        [When(@"I click button Quay l?i")]
+        public void WhenIClickButtonQuayL?i()
+        {
+            ScenarioContext.Current.Pending();
+        }
+
+        [Then(@"I go back to view XemKeHoachDaoTao")]
+        public void ThenIGoBackToViewXemKeHoachDaoTao()
+        {
+            ScenarioContext.Current.Pending();
+        }
+
+    }
+}
+
